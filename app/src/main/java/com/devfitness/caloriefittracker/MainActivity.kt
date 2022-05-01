@@ -10,20 +10,15 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.devfitness.caloriefittracker.ui.theme.CalorieFitnessTrackerTheme
+import com.devfitness.onboarding_presentation.welcome.WelcomeScreen
+import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CalorieFitnessTrackerTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
+            CaloryTrackerTheme {
+            WelcomeScreen()
             }
         }
     }
@@ -37,7 +32,5 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    CalorieFitnessTrackerTheme {
-        Greeting("Android")
-    }
+
 }
